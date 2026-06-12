@@ -1,0 +1,462 @@
+/* ==========================================
+   HOMEPAGE SPECIFIC STYLES (style.css)
+   Inherits design variables, navigation, and footer from header-footer.css
+   ========================================== */
+
+/* ==========================================
+   HERO / SEARCH SECTION
+   ========================================== */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    min-height: 85vh;
+    padding: 160px 20px 80px 20px;
+    background: linear-gradient(to bottom, rgba(11, 11, 16, 0.4), var(--bg-base)), url("Assets/Images/group-1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+
+.big-title {
+    text-align: center;
+    color: var(--text-main);
+    font-size: 44px;
+    font-weight: 800;
+    line-height: 1.25;
+    max-width: 850px;
+    margin: 40px auto 30px auto;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    background: linear-gradient(135deg, #ffffff 30%, #a5b4fc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+}
+
+header .search-form {
+    padding: 32px;
+    margin-bottom: 30px;
+    background: rgba(22, 22, 36, 0.65);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--border-glass);
+    width: 100%;
+    max-width: 600px;
+    border-radius: 16px;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition-smooth);
+}
+
+header .search-form:hover {
+    border-color: rgba(255, 94, 98, 0.2);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+}
+
+header .search-form h4 {
+    display: block;
+    text-align: center;
+    padding-bottom: 20px;
+    font-size: 15px;
+    color: var(--text-muted);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+header .search-form .search {
+    display: flex;
+    gap: 8px;
+    background: rgba(11, 11, 16, 0.5);
+    border: 1px solid var(--border-glass);
+    border-radius: 10px;
+    padding: 4px;
+    transition: var(--transition-smooth);
+}
+
+header .search-form .search:focus-within {
+    border-color: var(--color-primary);
+    box-shadow: var(--shadow-glow);
+}
+
+header .search-form .search .search-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    height: 46px;
+    padding: 0 16px;
+    font-size: 16px;
+    color: var(--text-main);
+    font-family: var(--font-body);
+}
+
+header .search-form .search .search-input::placeholder {
+    color: var(--text-dim);
+}
+
+header .search-form .search .recherche {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    padding: 0 24px;
+    background: var(--gradient-primary);
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+}
+
+header .search-form .search .recherche:hover {
+    opacity: 0.95;
+    box-shadow: 0 4px 12px rgba(255, 94, 98, 0.3);
+}
+
+header .button {
+    padding: 12px 28px;
+    border: 1px solid var(--border-glass);
+    outline: none;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    background: rgba(255, 255, 255, 0.03);
+    color: var(--text-main);
+    cursor: pointer;
+    transition: var(--transition-smooth);
+}
+
+header .button:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+    box-shadow: var(--shadow-glow-cyan);
+    transform: translateY(-2px);
+}
+
+/* ==========================================
+   MAIN SECTION & 4 STEPS PROCESS
+   ========================================== */
+main {
+    width: 100%;
+}
+
+main h2 {
+    text-align: center;
+    font-weight: 800;
+    font-size: 34px;
+    color: var(--text-main);
+    margin: 80px 0 45px 0;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+}
+
+.row1 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-gap: 24px;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px 80px 20px;
+}
+
+.row1 > div {
+    background: var(--bg-card);
+    border: 1px solid var(--border-glass);
+    border-radius: 16px;
+    padding: 35px 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: var(--transition-smooth);
+    box-shadow: var(--shadow-sm);
+}
+
+.row1 > div:hover {
+    transform: translateY(-5px);
+    background: var(--bg-card-hover);
+    border-color: var(--border-glass-glow);
+    box-shadow: var(--shadow-glow), var(--shadow-md);
+}
+
+.row1 img,
+.row1 .step-icon {
+    margin-bottom: 24px;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+    transition: var(--transition-smooth);
+    height: 60px;
+    width: auto;
+    font-size: 48px;
+    color: var(--color-primary);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.row1 > div:hover img,
+.row1 > div:hover .step-icon {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 12px rgba(255, 94, 98, 0.6));
+    color: var(--color-accent);
+}
+
+.row1 h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: var(--text-main);
+    font-family: var(--font-headings);
+}
+
+.row1 p {
+    font-size: 14.5px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ==========================================
+   FEATURE ALTERNATING SECTIONS
+   ========================================== */
+.rows {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: center;
+    gap: 60px;
+    max-width: 1200px;
+    width: calc(100% - 40px);
+    margin: 0 auto 50px auto;
+    padding: 50px;
+    border-radius: 24px;
+    border: 1px solid var(--border-glass);
+    overflow: hidden;
+    position: relative;
+    box-shadow: var(--shadow-md);
+    background: var(--bg-card);
+}
+
+.row2 {
+    background: linear-gradient(135deg, rgba(255, 94, 98, 0.08), rgba(255, 153, 102, 0.02));
+    border-color: rgba(255, 94, 98, 0.12);
+}
+
+.row3 {
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.08), rgba(56, 189, 248, 0.02));
+    border-color: rgba(139, 92, 246, 0.12);
+    /* Swap visual order for alternating look */
+}
+
+.row3 div:nth-child(1) {
+    order: 1;
+}
+
+.row3 .img {
+    order: 0;
+}
+
+.row4 {
+    background: linear-gradient(135deg, rgba(56, 189, 248, 0.1), rgba(139, 92, 246, 0.02));
+    border-color: rgba(56, 189, 248, 0.15);
+}
+
+.rows h3 {
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    margin-top: 0;
+    line-height: 1.25;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+}
+
+.row2 h3 {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.row3 h3 {
+    background: linear-gradient(135deg, var(--color-violet), var(--color-accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.row4 h3 {
+    background: linear-gradient(135deg, var(--color-accent), var(--color-violet));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.rows p {
+    font-size: 16px;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 35px;
+    margin-top: 0;
+}
+
+.rows a {
+    display: inline-block;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 13.5px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    background: #fff;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition-smooth);
+    max-width: fit-content;
+}
+
+.row2 a {
+    color: var(--color-primary);
+}
+
+.row2 a:hover {
+    background: var(--gradient-primary);
+    color: #fff;
+    box-shadow: var(--shadow-glow);
+    transform: translateY(-2px);
+}
+
+.row3 a {
+    color: var(--color-violet);
+}
+
+.row3 a:hover {
+    background: linear-gradient(135deg, var(--color-violet), var(--color-accent));
+    color: #fff;
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+    transform: translateY(-2px);
+}
+
+.rows .img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rows .img img {
+    width: 100%;
+    max-width: 420px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition-smooth);
+    border: 1px solid var(--border-glass);
+}
+
+.rows:hover .img img {
+    transform: scale(1.02) translateY(-4px);
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+.rows .mobile {
+    display: none;
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN (MEDIA QUERIES)
+   ========================================== */
+@media screen and (max-width: 991px) {
+    header .big-title {
+        font-size: 34px;
+    }
+    
+    .rows {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 35px;
+        text-align: center;
+    }
+    
+    .row3 div:nth-child(1) {
+        order: 0;
+    }
+    
+    .row3 .img {
+        order: 1;
+    }
+
+    .rows h3 {
+        font-size: 26px;
+    }
+    
+    .rows p {
+        font-size: 15.5px;
+        margin-bottom: 25px;
+    }
+    
+    .rows a {
+        margin: 0 auto;
+    }
+    
+    .rows .img img {
+        height: auto;
+        aspect-ratio: 16/10;
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    header {
+        padding: 120px 15px 60px 15px;
+        min-height: 70vh;
+    }
+    
+    header .big-title {
+        font-size: 25px;
+        margin: 25px auto 20px auto;
+    }
+    
+    header .search-form {
+        padding: 20px;
+    }
+    
+    header .search-form .search {
+        flex-direction: column;
+        background: transparent;
+        border: none;
+        gap: 12px;
+        padding: 0;
+    }
+    
+    header .search-form .search .search-input {
+        background: rgba(11, 11, 16, 0.6);
+        border: 1px solid var(--border-glass);
+        border-radius: 8px;
+        width: 100%;
+        height: 48px;
+    }
+    
+    header .search-form .search .recherche {
+        height: 48px;
+        width: 100%;
+    }
+    
+    main h2 {
+        font-size: 26px;
+        margin: 60px 0 30px 0;
+    }
+    
+    .row1 {
+        grid-gap: 16px;
+        padding: 0 15px 50px 15px;
+    }
+}

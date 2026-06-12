@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>More - Events Platform</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="header-footer.css">
+    <link rel="stylesheet" href="more.css">
+    <script src="bootstrap.min.js"></script>
+</head>
+<body>
+    
+    <!-- debut header -->
+    <header>
+        <nav class="nav-bar">
+            <div class="logo">
+                <img src="Assets/Images/group-2.svg" width="100px" alt="Events Logo">
+                <a href="index.html"><h2> [Events]</h2></a>
+            </div>
+            <div class="menu">    
+                <a href="search.html"><i class="fa-solid fa-magnifying-glass"></i><span> Search</span>  </a>
+                <a href="about.html"><i class="fa-solid fa-user"> </i>      <span>About</span> </a>
+                <a href="blog.html"><i class="fa-solid fa-rss"></i><span> Blog</span></a>
+                <a href="more.html" class="active"><i class="fa-solid fa-bars"></i> <span>More</span></a>
+            </div>
+        </nav>
+    </header>
+    <!-- fin header -->
+
+    <main class="more-container">
+        <div class="more-header">
+            <h1>MORE OPTIONS</h1>
+            <p>Discover platform statistics, check frequently asked questions, or contact support.</p>
+        </div>
+
+        <!-- Section Statistique -->
+        <section class="stats-section">
+            <div class="stat-card">
+                <i class="fa-solid fa-users"></i>
+                <h3>15,400+</h3>
+                <p>Active Members</p>
+            </div>
+            <div class="stat-card">
+                <i class="fa-solid fa-city"></i>
+                <h3>890+</h3>
+                <p>Cities Covered</p>
+            </div>
+            <div class="stat-card">
+                <i class="fa-solid fa-calendar-check"></i>
+                <h3>45,000+</h3>
+                <p>Events Organized</p>
+            </div>
+        </section>
+
+        <!-- FAQ & Support layout in columns -->
+        <div class="dashboard-more">
+            <!-- FAQ Section -->
+            <section class="faq-section">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>How do I join an event?</h4>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Simply go to the Search page, look for an event near your city, click "View Details", and view the details to participate. No prior signup is required for public events.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>Is the platform completely free?</h4>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes! [Events] is free to use. All listed community gatherings are open and free to participate unless specified otherwise by the event host.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>How do I host my own event?</h4>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Go to the About page and check out how to create events, or share details with your community. Hosts are verified to keep meetups safe.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Support Section -->
+            <section class="support-section">
+                <h2>Contact Helpdesk</h2>
+                <form action="" method="post" class="support-form">
+                    <div>
+                        <label for="support-name">Your Name</label>
+                        <input type="text" id="support-name" placeholder="John Doe" required>
+                    </div>
+                    <div>
+                        <label for="support-email">Your Email</label>
+                        <input type="email" id="support-email" placeholder="john@example.com" required>
+                    </div>
+                    <div>
+                        <label for="support-topic">Inquiry Topic</label>
+                        <select id="support-topic">
+                            <option value="general">General Inquiry</option>
+                            <option value="bug">Report a Bug</option>
+                            <option value="host">Host Verification</option>
+                            <option value="other">Other Options</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="support-message">Message</label>
+                        <textarea id="support-message" rows="4" placeholder="How can we help you?" required></textarea>
+                    </div>
+                    <input type="submit" value="Submit Request" class="btn-submit">
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <!-- pied du page -->
+    <footer>
+        <div class="menu-du-footer">
+            <div class="menu1">
+                <a href="index.html">HOME</a>
+                <a href="search.html">SEARCH</a>
+                <a href="about.html">ABOUT US</a>
+                <a href="#">ADVERTISE</a>
+            </div>
+            <a href="#" class="localisation">
+                <i class="fa-solid fa-location-dot"></i>
+            </a>
+            <div class="menu2">
+                <a href="#">FACEBOOK</a>
+                <a href="#">TWITTER</a>
+                <a href="#">INSTAGRAM</a>
+                <a href="blog.html">BLOG</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <span> Subscribe</span>
+                <form action="" method="post">
+                    <div>
+                        <input type="email" class="email" placeholder="Insert your e-mail here" required>
+                        <input type="submit" value="send" class="send">
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-4">
+                <span> Contact</span>
+                <p>Have a question or suggestion?</p>
+                <a href="mailto:contact@events.com?SUBJECT=Ask Me Anything">contact@events.com</a>
+            </div>
+            <div class="col-md-4">
+                <span>About</span>
+                <p> [Events] is an online platform that works to improve and increase social life connections,
+                      when this nightmare that we are currently living is over <a href="about.html">learn more</a>.
+                </p>
+            </div>
+        </div>
+        <div class="footer2">
+            <div class="icone">
+                <a href="#"><i class="fa-brands fa-facebook-square"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-tumblr"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+            <div class="copright">
+                &copy; 2022 [Events], Inc. All rights reserved
+            </div>
+        </div>
+    </footer>
+    <!-- fin pied du page -->
+
+</body>
+</html>

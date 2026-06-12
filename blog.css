@@ -1,0 +1,199 @@
+/* ==========================================
+   BLOG PAGE SPECIFIC STYLES (blog.css)
+   Inherits design variables, navigation, and footer from header-footer.css
+   ========================================== */
+
+.blog-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 120px 20px 60px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* ==========================================
+   BLOG HEADER TITLE
+   ========================================== */
+.blog-header {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.blog-header h1 {
+    font-size: 36px;
+    font-weight: 800;
+    color: var(--text-main);
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+}
+
+.blog-header p {
+    font-size: 16px;
+    color: var(--text-muted);
+    line-height: 1.65;
+    margin: 0;
+}
+
+/* ==========================================
+   BLOG GRID & POST CARDS
+   ========================================== */
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.blog-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-glass);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition-smooth);
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-card:hover {
+    transform: translateY(-6px);
+    background: var(--bg-card-hover);
+    border-color: var(--border-glass-glow);
+    box-shadow: var(--shadow-glow), var(--shadow-md);
+}
+
+.blog-card .post-img-container {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-bottom: 1px solid var(--border-glass);
+}
+
+.blog-card .post-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition-smooth);
+}
+
+.blog-card:hover .post-img-container img {
+    transform: scale(1.04);
+}
+
+.blog-card .category-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: var(--gradient-primary);
+    color: white;
+    font-size: 10.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 5px 12px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.blog-card .post-body {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 14px;
+}
+
+.blog-card .post-meta {
+    display: flex;
+    gap: 16px;
+    font-size: 12px;
+    color: var(--text-dim);
+    font-weight: 600;
+}
+
+.blog-card .post-meta span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.blog-card .post-meta i {
+    color: var(--color-primary);
+}
+
+.blog-card h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-main);
+    margin: 0;
+    line-height: 1.35;
+    transition: var(--transition-smooth);
+}
+
+.blog-card:hover h2 {
+    color: var(--color-accent);
+}
+
+.blog-card p {
+    font-size: 14.5px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.blog-card .read-more {
+    margin-top: auto;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--color-accent);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: var(--transition-smooth);
+    width: fit-content;
+    padding-top: 10px;
+}
+
+.blog-card .read-more i {
+    transition: var(--transition-smooth);
+}
+
+.blog-card:hover .read-more {
+    color: var(--color-primary);
+}
+
+.blog-card:hover .read-more i {
+    transform: translateX(4px);
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN (MEDIA QUERIES)
+   ========================================== */
+@media (max-width: 768px) {
+    .blog-container {
+        padding-top: 100px;
+        gap: 30px;
+    }
+    
+    .blog-header h1 {
+        font-size: 28px;
+    }
+    
+    .blog-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}

@@ -1,0 +1,309 @@
+/* ==========================================
+   SEARCH PAGE SPECIFIC STYLES (search.css)
+   Inherits design variables, navigation, and footer from header-footer.css
+   ========================================== */
+
+main {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 120px 20px 60px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* ==========================================
+   FILTER FORM STYLE
+   ========================================== */
+main .change_form {
+    background: rgba(22, 22, 36, 0.65);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--border-glass);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: var(--shadow-md);
+}
+
+main .change_form h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 24px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+main .change_form form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    align-items: flex-end;
+}
+
+main .change_form form div {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin: 0;
+}
+
+main .change_form label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+main .change_form input,
+main .change_form select {
+    background: rgba(11, 11, 16, 0.5);
+    border: 1px solid var(--border-glass);
+    border-radius: 8px;
+    padding: 10px 14px;
+    color: var(--text-main);
+    font-family: var(--font-body);
+    font-size: 14.5px;
+    outline: none;
+    transition: var(--transition-smooth);
+    width: 100%;
+    height: 44px;
+}
+
+main .change_form input:focus,
+main .change_form select:focus {
+    border-color: var(--color-primary);
+    box-shadow: var(--shadow-glow);
+}
+
+/* Adjustments for date inputs */
+main .change_form input[type="date"] {
+    position: relative;
+}
+
+/* Dropdown Options */
+main .change_form select option {
+    background: #161624;
+    color: var(--text-main);
+}
+
+/* Form Action Buttons Wrapper */
+main .change_form .form-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+main .change_form #change_search {
+    background: var(--gradient-primary);
+    color: white;
+    border: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: var(--transition-smooth);
+    box-shadow: var(--shadow-sm);
+    height: 44px;
+    margin: 0;
+}
+
+main .change_form #change_search:hover {
+    opacity: 0.95;
+    box-shadow: 0 4px 12px rgba(255, 94, 98, 0.35);
+}
+
+main .change_form #change_clear {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-glass);
+    color: var(--text-main);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: var(--transition-smooth);
+    height: 44px;
+    margin: 0;
+}
+
+main .change_form #change_clear:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+    box-shadow: var(--shadow-glow-cyan);
+}
+
+/* ==========================================
+   RESULTS SECTION & EVENT CARDS
+   ========================================== */
+.results-section {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.results-title {
+    font-family: var(--font-headings);
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-main);
+    margin: 0;
+}
+
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.event-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-glass);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition-smooth);
+    display: flex;
+    flex-direction: column;
+}
+
+.event-card:hover {
+    transform: translateY(-6px);
+    background: var(--bg-card-hover);
+    border-color: var(--border-glass-glow);
+    box-shadow: var(--shadow-glow), var(--shadow-md);
+}
+
+.event-card .card-img-container {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-bottom: 1px solid var(--border-glass);
+}
+
+.event-card .card-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition-smooth);
+}
+
+.event-card:hover .card-img-container img {
+    transform: scale(1.05);
+}
+
+.event-card .badge-price {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: var(--gradient-primary);
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 5px 12px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.event-card .card-body {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 12px;
+}
+
+.event-card .card-date {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.event-card h4 {
+    font-size: 19px;
+    font-weight: 700;
+    color: var(--text-main);
+    margin: 0;
+    line-height: 1.35;
+}
+
+.event-card .card-location,
+.event-card .card-host {
+    font-size: 14.5px;
+    color: var(--text-muted);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.event-card .card-location i,
+.event-card .card-host i {
+    color: var(--color-accent);
+    font-size: 14px;
+    width: 16px;
+    text-align: center;
+}
+
+.event-card .btn-details {
+    margin-top: 15px;
+    display: block;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-glass);
+    color: var(--text-main);
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 12px;
+    border-radius: 8px;
+    transition: var(--transition-smooth);
+    box-shadow: none;
+    max-width: 100%;
+}
+
+.event-card:hover .btn-details {
+    background: var(--gradient-primary);
+    color: white;
+    border-color: transparent;
+    box-shadow: var(--shadow-glow);
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN (MEDIA QUERIES)
+   ========================================== */
+@media (max-width: 768px) {
+    main {
+        padding-top: 100px;
+        gap: 30px;
+    }
+    
+    main .change_form {
+        padding: 20px;
+    }
+    
+    main .change_form form {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    main .change_form .form-buttons {
+        margin-top: 5px;
+    }
+    
+    .events-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}

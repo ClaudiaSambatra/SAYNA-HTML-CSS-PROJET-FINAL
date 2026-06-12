@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+			<meta charset="UTF-8">
+			<meta http-equiv="X-UA-Compatible" content="IE-edge">
+			<meta name="viewport" content="width=device-width" initial-scale="1.0"/>
+			<!-- <link rel="stylesheet" href="#.css"> -->
+			<link rel="stylesheet" href="search.css">
+			<link rel="stylesheet" href="header-footer.css">
+			<!-- frameworks -->
+			<link rel="stylesheet" href="bootstrap.min.css">
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+			<script src="bootstrap.min.js"></script>
+			<!-- fin du frameworks -->
+					
+			<title>search</title>
+	</head>
+	<body>
+		<!-- debut header -->
+        <header>
+            <!-- debut bar de menu -->
+			 <nav class="nav-bar">
+                <div class="logo">
+                    <img src="Assets/Images/group-2.svg" width="100px" alt="Events Logo">
+                    <a href="index.html"><h2> [Events]</h2></a>
+                </div>
+                <div class="menu">    
+                    <a href="search.html" class="active"><i class="fa-solid fa-magnifying-glass"></i><span> Search</span>  </a>
+                    <a href="about.html"><i class="fa-solid fa-user"> </i>      <span>About</span> </a>
+                    <a href="blog.html"><i class="fa-solid fa-rss"></i><span> Blog</span></a>
+                    <a href="more.html"><i class="fa-solid fa-bars"></i> <span>More</span></a>
+                </div>
+            </nav>
+            <!-- fin bar de menu -->
+        </header>
+        <!-- fin header -->
+
+		<main>
+        <!-- debut section -->	
+				<div class="change_form">
+					<h3>Filter by location, host, subject, date, daytime:</h3>
+					<form method="post" action="">
+						<div>
+							<label for="Location">Location</label><br>
+							<input type="text" id="Location" placeholder="Current City">
+						</div>
+						<div>
+							<label for="Host">Host</label><br>
+							<input type="text" id="Host" placeholder="Host-name"/>
+						</div>
+						<div>
+							<label for="Subject">Subject</label><br>
+							<input type="text" id="Subject" placeholder="e.g. Beach">
+						</div>
+						<div>
+							<label for="initial-date">Initial date</label><br>
+							<input type="date" id="initial-date"/>
+						</div>
+						<div>
+							<label for="final-date">Final date</label><br>
+							<input type="date" id="final-date"/>
+						</div>
+						<div>
+							<label for="day-time">Day time</label><br>
+							<select name="day-time" id="day-time">
+								<option value="choice">choose</option>
+								<option value="day">Daylight</option>
+								<option value="night">Night</option>
+							</select>
+						</div>
+						<div class="form-buttons">
+							<input type="submit" value="Search" id="change_search"/>
+							<input type="reset" value="Clear" id="change_clear"/>
+						</div>
+					</form>
+				</div>
+				
+				<div class="results-section">
+					<h5 class="results-title">Search Results: Found 3 Events Nearby</h5>
+					<div class="events-grid">
+						<!-- Card 1 -->
+						<div class="event-card">
+							<div class="card-img-container">
+								<img src="Assets/Images/group-2.jpg" alt="Sunny Beach Day">
+								<span class="badge-price">Free</span>
+							</div>
+							<div class="card-body">
+								<span class="card-date"><i class="fa-regular fa-calendar"></i> 21/06/2022</span>
+								<h4>A Sunny Beach Day</h4>
+								<p class="card-location"><i class="fa-solid fa-location-dot"></i> Current City</p>
+								<p class="card-host"><i class="fa-solid fa-user"></i> Host: Host-name</p>
+								<a href="about.html" class="btn-details">View Details</a>
+							</div>
+						</div>
+						<!-- Card 2 -->
+						<div class="event-card">
+							<div class="card-img-container">
+								<img src="Assets/Images/group-4.jpg" alt="Tech Networking Meetup">
+								<span class="badge-price">Free</span>
+							</div>
+							<div class="card-body">
+								<span class="card-date"><i class="fa-regular fa-calendar"></i> 25/06/2022</span>
+								<h4>Tech Networking Meetup</h4>
+								<p class="card-location"><i class="fa-solid fa-location-dot"></i> Innovation Hub</p>
+								<p class="card-host"><i class="fa-solid fa-user"></i> Host: Alex Rivers</p>
+								<a href="about.html" class="btn-details">View Details</a>
+							</div>
+						</div>
+						<!-- Card 3 -->
+						<div class="event-card">
+							<div class="card-img-container">
+								<img src="Assets/Images/group-3.jpg" alt="Spreading Love Picnic">
+								<span class="badge-price">Free</span>
+							</div>
+							<div class="card-body">
+								<span class="card-date"><i class="fa-regular fa-calendar"></i> 30/06/2022</span>
+								<h4>Spreading Love Picnic</h4>
+								<p class="card-location"><i class="fa-solid fa-location-dot"></i> Central Park</p>
+								<p class="card-host"><i class="fa-solid fa-user"></i> Host: Sarah Jenkins</p>
+								<a href="about.html" class="btn-details">View Details</a>
+							</div>
+						</div>
+					</div>
+				</div>
+		</main>
+		<!-- pied du page -->
+        <footer>
+            <div class="menu-du-footer">
+                <div class="menu1">
+                    <a href="index.html">HOME</a>
+                    <a href="search.html">SEARCH</a>
+                    <a href="about.html">ABOUT US</a>
+                    <a href="#">ADVERTISE</a>
+                </div>
+                <a href="#" class="localisation">
+                    <i class="fa-solid fa-location-dot"></i>
+                </a>
+                <div class="menu2">
+                    <a href="#">FACEBOOK</a>
+                    <a href="#">TWITTER</a>
+                    <a href="#">INSTAGRAM</a>
+                    <a href="blog.html">BLOG</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <span> Subscribe</span>
+                    <form action="" method="post">
+                        <div>
+                            <input type="email" class="email" placeholder="Insert your e-mail here" required>
+                            <input type="submit" value="send" class="send">
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-4">
+                    <span> Contact</span>
+                    <p>Have a question or suggestion?</p>
+                    <a href="mailto:contact@events.com?SUBJECT=Ask Me Anything">contact@events.com</a>
+                </div>
+                <div class="col-md-4">
+                    <span>About</span>
+                    <p> [Events] is an online platform that works to improve and increase social life connections,
+                          when this nightmare that we are currently living is over <a href="about.html">learn more</a>.
+                    </p>
+                </div>
+            </div>
+            <div class="footer2">
+                <div class="icone">
+                    <a href="#"><i class="fa-brands fa-facebook-square"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-tumblr"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <div class="copright">
+                    &copy; 2022 [Events], Inc. All rights reserved
+                </div>
+            </div>
+        </footer>
+		<!-- fin pied du page -->
+	</body>
+</html>
